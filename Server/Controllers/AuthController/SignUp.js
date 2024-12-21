@@ -74,7 +74,7 @@ export const signup = async (req, res) => {
       text: `Account has been created with email id ${email} and username ${username}. Account Created At ${savedUser.accountCreatedAt} `,
     };
 
-    transporter.sendMail(mailOptions);
+    // transporter.sendMail(mailOptions);
 
     return res.status(201).json({
       message: `New User Successfully Created`,

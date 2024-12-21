@@ -32,7 +32,7 @@ export const login = async (req, res) => {
     userExists.accountLastLogin = dateAndTimeGenerate();
     await userExists.save();
 
-    const token = jwt.sign({ userID: userExists._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ id: userExists._id }, process.env.JWT_SECRET, {
       expiresIn: "7d",
     });
 
